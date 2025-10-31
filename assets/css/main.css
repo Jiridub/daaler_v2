@@ -4060,9 +4060,9 @@ body.is-mobile.landing .wrapper.style4 {
     min-height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.8;
-    filter: brightness(0.7);
-    transform: scale(1); /* výchozí */
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
     transform-origin: center center;
 }
 /* Tablety */
@@ -4164,3 +4164,4 @@ body.is-preload #banner-video {
     opacity: 1 !important;
     filter: none !important;
 }
+
