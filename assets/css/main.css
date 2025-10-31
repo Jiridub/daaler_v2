@@ -4093,26 +4093,31 @@ body.is-mobile.landing .wrapper.style4 {
 .logo-banner {
     filter: invert(100%);
 }
-#banner .more.scrolly {
-    display: inline-block;
-    position: relative;   /* necháme v flow, ne absolutně */
-    margin-top: 2em;      /* vzdálenost od loga */
-    text-align: center;
-    z-index: 2;           /* nad videem */
+#banner {
+    position: relative; /* aby tlačítko mohlo být pozicované vůči banneru */
 }
 
-/* Mobil – aby bylo tlačítko vidět i při malých výškách */
+#banner .more.scrolly {
+    position: absolute;
+    bottom: 2em;             /* vzdálenost od spodního okraje banneru */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;              /* nad videem */
+    text-align: center;
+}
+
+/* Mobil – menší mezera odspodu a menší text */
 @media screen and (max-width: 767px) {
     #banner .more.scrolly {
-        margin-top: 1.5em;
+        bottom: 1.5em;
         font-size: 0.9em;
     }
 }
 
-/* Tablet – drobná úprava pro vertikální centrování */
+/* Tablet – drobná úprava */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #banner .more.scrolly {
-        margin-top: 2em;
+        bottom: 2em;
     }
 }
 /* Preloader */
@@ -4164,4 +4169,5 @@ body.is-preload #banner-video {
     opacity: 1 !important;
     filter: none !important;
 }
+
 
