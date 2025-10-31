@@ -4105,21 +4105,6 @@ body.is-mobile.landing .wrapper.style4 {
     z-index: 2;              /* nad videem */
     text-align: center;
 }
-
-/* Mobil – menší mezera odspodu a menší text */
-@media screen and (max-width: 767px) {
-    #banner .more.scrolly {
-        bottom: 1.5em;
-        font-size: 0.9em;
-    }
-}
-
-/* Tablet – drobná úprava */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    #banner .more.scrolly {
-        bottom: 2em;
-    }
-}
 /* Preloader */
 #preloader {
     position: fixed;
@@ -4169,5 +4154,6 @@ body.is-preload #banner-video {
     opacity: 1 !important;
     filter: none !important;
 }
+
 
 
