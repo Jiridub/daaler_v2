@@ -4077,10 +4077,8 @@ body.is-mobile.landing .wrapper.style4 {
 /* Telefony */
 @media screen and (max-width: 736px) {
     #banner-video {
-        object-fit: cover;             /* vyplní celý banner */
-        object-position: center center; /* střed videa */
-        transform: scale(0.7);        /* mírné oddálení */
-        transform-origin: center center;
+        min-height: 120%;           /* jemné oddálení středu videa */
+        object-position: center center; /* stále vycentrované */
     }
 }
 
@@ -4197,6 +4195,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
