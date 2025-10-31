@@ -4105,14 +4105,14 @@ body.is-mobile.landing .wrapper.style4 {
     z-index: 10;
 }
 
-/* Preloader overlay */
+/* Preloader */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #111; /* ladí s webem */
+    background: #000; /* nebo poloprůhledná barva */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4120,11 +4120,11 @@ body.is-mobile.landing .wrapper.style4 {
 }
 
 #preloader .spinner {
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    border-top: 4px solid #fff;
+    border: 6px solid rgba(255,255,255,0.2);
+    border-top: 6px solid #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     animation: spin 1s linear infinite;
 }
 
