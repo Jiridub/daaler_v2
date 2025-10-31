@@ -5,6 +5,7 @@
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -3997,3 +3998,70 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+/* Banner základ */
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    padding: 6em 0;
+}
+
+/* Logo — cca 5 cm na desktopu */
+#banner .logo-banner {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 5cm;        /* přesně fyzická velikost */
+    max-width: 40vw;   /* ochrana na menších obrazovkách */
+}
+
+/* Tablet – PORTRAIT */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    #banner .logo-banner {
+        width: 4cm;
+        max-width: 50vw;
+    }
+    #banner {
+        padding: 7em 0;
+        min-height: 70vh;
+    }
+}
+
+/* Tablet – LANDSCAPE */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #banner .logo-banner {
+        width: 4.5cm;
+        max-width: 45vw;
+    }
+    #banner {
+        padding: 6em 0;
+        min-height: 60vh;
+    }
+}
+
+/* Mobil – PORTRAIT */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    #banner .logo-banner {
+        width: 3.5cm;
+        max-width: 70vw;
+    }
+    #banner {
+        padding: 5em 0;
+        min-height: 60vh;
+    }
+}
+
+/* Mobil – LANDSCAPE */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #banner .logo-banner {
+        width: 3cm;
+        max-width: 60vw;
+    }
+    #banner {
+        padding: 4em 0;
+        min-height: 100vh;
+    }
+}
