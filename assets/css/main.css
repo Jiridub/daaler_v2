@@ -4091,4 +4091,7 @@ body.is-mobile.landing .wrapper.style4 {
     text-align: center;
 }
 
+.logo-banner {
+    filter: invert(100%);
+}
 
