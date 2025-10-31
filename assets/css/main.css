@@ -4148,9 +4148,18 @@ body.is-mobile.landing .wrapper.style4 {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
 }
-#banner-video {
-    opacity: 0.8 !important;         /* původní opacity */
-    filter: brightness(0.7) !important; /* původní filtr */
-    transition: opacity 0.5s ease;   /* obnovíme přechod */
-}
+/* obnov video animace a přechody, i když je body.is-preload */
+body.is-preload #banner-video {
+    -moz-animation: none;
+    -webkit-animation: none;
+    -ms-animation: none;
+    animation: none;
+    
+    -moz-transition: opacity 0.5s ease, filter 0.5s ease;
+    -webkit-transition: opacity 0.5s ease, filter 0.5s ease;
+    -ms-transition: opacity 0.5s ease, filter 0.5s ease;
+    transition: opacity 0.5s ease, filter 0.5s ease;
 
+    opacity: 0.8;        /* původní opacity */
+    filter: brightness(0.7); /* původní filtr */
+}
