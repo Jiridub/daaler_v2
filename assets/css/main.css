@@ -4154,6 +4154,13 @@ body.is-preload #banner-video {
     opacity: 1 !important;
     filter: none !important;
 }
+#banner-video {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    -webkit-filter: none !important;
+    background: none !important;
+}
 
 
 
