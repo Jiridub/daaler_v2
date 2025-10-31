@@ -4098,11 +4098,26 @@ body.is-mobile.landing .wrapper.style4 {
     filter: invert(100%);
 }
 #banner .more.scrolly {
-    position: absolute;
-    bottom: 20px;        /* vzdálenost od spodní hrany banneru */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+    display: inline-block;
+    position: relative;   /* necháme v flow, ne absolutně */
+    margin-top: 2em;      /* vzdálenost od loga */
+    text-align: center;
+    z-index: 2;           /* nad videem */
+}
+
+/* Mobil – aby bylo tlačítko vidět i při malých výškách */
+@media screen and (max-width: 767px) {
+    #banner .more.scrolly {
+        margin-top: 1.5em;
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet – drobná úprava pro vertikální centrování */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #banner .more.scrolly {
+        margin-top: 2em;
+    }
 }
 
 /* Preloader */
@@ -4132,3 +4147,4 @@ body.is-mobile.landing .wrapper.style4 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
