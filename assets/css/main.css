@@ -4148,4 +4148,9 @@ body.is-mobile.landing .wrapper.style4 {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
 }
+#banner-video {
+    opacity: 0.8 !important;         /* původní opacity */
+    filter: brightness(0.7) !important; /* původní filtr */
+    transition: opacity 0.5s ease;   /* obnovíme přechod */
+}
 
