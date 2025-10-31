@@ -176,22 +176,24 @@
     const video = document.getElementById('banner-video');
     const preloader = document.getElementById('preloader');
 
-    // počkej až bude video připravené přehrávat
-    video.addEventListener('canplaythrough', () => {
+    function hidePreloader() {
         preloader.style.opacity = '0';
         preloader.style.transition = 'opacity 0.5s ease';
         setTimeout(() => preloader.style.display = 'none', 500);
+    }
+
+    // počkej až se video načte alespoň částečně
+    video.addEventListener('loadeddata', () => {
+        hidePreloader();
     });
 
-    // fallback: po 5s, i kdyby video nechtělo načíst, zmizí
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => preloader.style.display = 'none', 500);
-    }, 5000);
+    // fallback: po 5s, i kdyby video nechtělo načíst, zmizí preloader
+    setTimeout(() => hidePreloader(), 5000);
 </script>
 	</body>
 
 </html>
+
 
 
 
