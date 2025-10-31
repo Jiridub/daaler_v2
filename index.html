@@ -174,37 +174,27 @@
 			<script src="assets/js/main.js"></script>
 <script>
     const video = document.getElementById('banner-video');
-    const preloader = document.getElementById('preloader');
+const preloader = document.getElementById('preloader');
 
-    function hidePreloader() {
-        preloader.style.opacity = '0';
-        preloader.style.transition = 'opacity 0.5s ease';
-        setTimeout(() => preloader.style.display = 'none', 500);
-    }
+function hidePreloader() {
+    preloader.style.opacity = '0';
+    preloader.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => preloader.style.display = 'none', 500);
+}
 
-    // počkej až se video načte alespoň částečně
-    video.addEventListener('loadeddata', () => {
+// počkej až se načte celá stránka
+window.addEventListener('load', () => {
+    // počkej, až bude video schopné plynule se přehrát
+    if (video.readyState >= 3) { // 3 = HAVE_FUTURE_DATA
         hidePreloader();
-    });
+    } else {
+        video.addEventListener('canplaythrough', hidePreloader);
+    }
+});
 
-    // fallback: po 5s, i kdyby video nechtělo načíst, zmizí preloader
-    setTimeout(() => hidePreloader(), 5000);
+// fallback: po 7s, i kdyby video nechtělo načíst, zmizí preloader
+setTimeout(() => hidePreloader(), 7000);
 </script>
 	</body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
