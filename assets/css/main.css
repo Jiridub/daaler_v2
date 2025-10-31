@@ -4105,5 +4105,30 @@ body.is-mobile.landing .wrapper.style4 {
     z-index: 10;
 }
 
+/* Preloader overlay */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111; /* ladí s webem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
 
+#preloader .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
