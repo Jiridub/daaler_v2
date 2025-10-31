@@ -4077,10 +4077,10 @@ body.is-mobile.landing .wrapper.style4 {
 /* Telefony */
 @media screen and (max-width: 736px) {
     #banner-video {
-        transform: scale(0.80);       /* jemné oddálení – méně než 1, ale ne příliš */
+        object-fit: cover;             /* vyplní celý banner */
+        object-position: center center; /* střed videa zůstane uprostřed */
+        transform: scale(1.05);        /* jemné „oddálení“ – přiblížíme jen nejnutnější plochu, zbytek videa vidět */
         transform-origin: center center;
-        object-fit: cover;
-        object-position: center center;
     }
 }
 
@@ -4197,6 +4197,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
