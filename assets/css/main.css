@@ -4097,5 +4097,12 @@ body.is-mobile.landing .wrapper.style4 {
 .logo-banner {
     filter: invert(100%);
 }
+#banner .more.scrolly {
+    position: absolute;
+    bottom: 20px;        /* vzdálenost od spodní hrany banneru */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
 
