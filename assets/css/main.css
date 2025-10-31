@@ -4094,16 +4094,20 @@ body.is-mobile.landing .wrapper.style4 {
     filter: invert(100%);
 }
 #banner {
-    position: relative; /* aby tlačítko mohlo být pozicované vůči banneru */
+    position: relative; /* ukotví tlačítko k banneru */
 }
 
 #banner .more.scrolly {
     position: absolute;
-    bottom: 2em;             /* vzdálenost od spodního okraje banneru */
     left: 50%;
+    bottom: 2em;
     transform: translateX(-50%);
-    z-index: 2;              /* nad videem */
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    z-index: 2;
     text-align: center;
+    display: inline-block;
+    margin: 0;
 }
 /* Preloader */
 #preloader {
@@ -4161,6 +4165,7 @@ body.is-preload #banner-video {
     -webkit-filter: none !important;
     background: none !important;
 }
+
 
 
 
