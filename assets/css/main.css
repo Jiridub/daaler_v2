@@ -4065,33 +4065,29 @@ input, select, textarea {
         min-height: 100vh;
     }
 }
-/* header se výškou podle zařízení */
-#header {
+/* banner plné výšky viewportu */
+#banner {
     position: relative;
-    height: 100vh;          /* výška viewportu */
-    line-height: 100vh;     /* vertikální centrování loga */
-    z-index: 10000;         /* logo a navigace nad videem */
-    background: none;
+    height: 100vh;        /* výška podle displeje */
+    overflow: hidden;
 }
 
-/* video za headerem */
-#header-video {
+/* video */
+#banner-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* video vyplní celý header */
-    z-index: -1;            /* video je za textem */
-    opacity: 0.8;           /* mírné stmívání */
+    object-fit: cover;    /* vyplní celý banner bez deformace */
+    z-index: -1;          /* video za logem */
+    opacity: 0.8;
     filter: brightness(0.7);
 }
 
-/* logo vertikálně centrované */
-#header h1 {
-    position: absolute;
-    top: 50%;
-    left: 1.25em;
-    transform: translateY(-50%);
-    margin: 0;
+/* logo zůstane nad videem */
+#banner .inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
