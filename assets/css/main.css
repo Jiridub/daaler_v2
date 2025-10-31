@@ -4014,7 +4014,7 @@ input, select, textarea {
     display: block;
     margin: 0 auto;
     height: auto;
-    width: 5cm;        /* přesně fyzická velikost */
+    width: 7cm;        /* přesně fyzická velikost */
     max-width: 40vw;   /* ochrana na menších obrazovkách */
 }
 
@@ -4064,4 +4064,34 @@ input, select, textarea {
         padding: 4em 0;
         min-height: 100vh;
     }
+}
+/* header se výškou podle zařízení */
+#header {
+    position: relative;
+    height: 100vh;          /* výška viewportu */
+    line-height: 100vh;     /* vertikální centrování loga */
+    z-index: 10000;         /* logo a navigace nad videem */
+    background: none;
+}
+
+/* video za headerem */
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* video vyplní celý header */
+    z-index: -1;            /* video je za textem */
+    opacity: 0.8;           /* mírné stmívání */
+    filter: brightness(0.7);
+}
+
+/* logo vertikálně centrované */
+#header h1 {
+    position: absolute;
+    top: 50%;
+    left: 1.25em;
+    transform: translateY(-50%);
+    margin: 0;
 }
