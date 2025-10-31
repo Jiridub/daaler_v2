@@ -4069,17 +4069,19 @@ body.is-mobile.landing .wrapper.style4 {
     transform: scale(1); /* výchozí */
     transform-origin: center center;
 }
-
-/* menší zařízení – o 20% oddálení */
 @media screen and (max-width: 980px) {
     #banner-video {
-        transform: scale(0.8); /* zmenšení o 20% */
+        object-fit: cover;        /* stále vyplní celý banner */
+        object-position: center 30%;  /* posune video směrem dolů, aby střed nebyl přiblížený */
+        transform: none;          /* žádné zmenšení */
     }
 }
 
 @media screen and (max-width: 736px) {
     #banner-video {
-        transform: scale(0.8); /* stejné pro mobily */
+        object-fit: cover;
+        object-position: center 25%;  /* jemný posun pro malé telefony */
+        transform: none;
     }
 }
 
@@ -4088,4 +4090,5 @@ body.is-mobile.landing .wrapper.style4 {
     z-index: 1;
     text-align: center;
 }
+
 
