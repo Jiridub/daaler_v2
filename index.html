@@ -182,19 +182,22 @@ function hidePreloader() {
     setTimeout(() => preloader.style.display = 'none', 500);
 }
 
-// počkej až se načte celá stránka
-window.addEventListener('load', () => {
-    // počkej, až bude video schopné plynule se přehrát
-    if (video.readyState >= 3) { // 3 = HAVE_FUTURE_DATA
+// počkej až se načte DOM a CSS
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('is-preload');
+
+    // pokud je video připravené
+    if(video.readyState >= 3) {
         hidePreloader();
     } else {
         video.addEventListener('canplaythrough', hidePreloader);
     }
 });
 
-// fallback: po 7s, i kdyby video nechtělo načíst, zmizí preloader
+// fallback po 7s
 setTimeout(() => hidePreloader(), 7000);
 </script>
 	</body>
 
 </html>
+
