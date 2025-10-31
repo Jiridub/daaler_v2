@@ -4165,6 +4165,38 @@ body.is-preload #banner-video {
     -webkit-filter: none !important;
     background: none !important;
 }
+/* tlačítko Learn More na banneru */
+#banner .more.scrolly {
+    position: absolute;
+    bottom: 2em;            /* dole */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+
+/* šipka pod textem */
+#banner .more.scrolly .scroll-arrow {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.5em auto 0 auto;
+}
+
+/* případně animace dolů */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(6px); }
+    60% { transform: translateX(-50%) translateY(3px); }
+}
+
+#banner .more.scrolly .scroll-arrow {
+    animation: bounce 2s infinite;
+}
 
 
 
