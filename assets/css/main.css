@@ -4200,15 +4200,3 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
-/* Globální reset pro všechny textové kontejnery */
-p, h1, h2, h3, h4, h5, h6, li, span, div {
-    display: block !important;
-    white-space: normal !important;
-}
-
-/* Pokud rodič používá flex nebo grid, přepnout směr pro text */
-.text-block {
-    display: flex;
-    flex-direction: column; /* umožní <br> zalomení */
-    white-space: normal;
-}
