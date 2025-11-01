@@ -4200,3 +4200,20 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
+/* Odstranění zbytkového prostoru mezi #three a footer */
+#three {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#three .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#three ul.features,
+#three .contact-actions {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
