@@ -162,68 +162,32 @@ technické dokonalosti a rodině</h2>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>
-    const video = document.getElementById('banner-video');
+const video = document.getElementById('banner-video');
 const preloader = document.getElementById('preloader');
 
 function hidePreloader() {
     preloader.style.opacity = '0';
     preloader.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => preloader.style.display = 'none', 500);
+    setTimeout(() => preloader.remove(), 500);
+    document.body.classList.remove('is-preload');
 }
 
-// počkej až se načte DOM a CSS
 window.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.remove('is-preload');
-
-    // pokud je video připravené
-    if(video.readyState >= 3) {
+    // zajistit preload videa
+    video.preload = 'auto';
+    
+    // kontrola, jestli už je video načtené
+    if(video.readyState >= 4) {
         hidePreloader();
     } else {
         video.addEventListener('canplaythrough', hidePreloader);
     }
+
+    // fallback: pokud video nezvládne načíst do 10s
+    setTimeout(() => {
+        if(document.body.classList.contains('is-preload')) {
+            hidePreloader();
+        }
+    }, 10000);
 });
-
-// fallback po 7s
-setTimeout(() => hidePreloader(), 7000);
 </script>
-	</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
