@@ -4200,36 +4200,15 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
-/* Globální nastavení, aby <br> vždy zalomil text */
-body, p, h1, h2, h3, h4, h5, h6, li, span, div {
-    display: block;         /* zajistí, že bloky jsou opravdu bloky */
-    white-space: normal;    /* povolí zalamování řádků a <br> */
+/* Globální reset pro všechny textové kontejnery */
+p, h1, h2, h3, h4, h5, h6, li, span, div {
+    display: block !important;
+    white-space: normal !important;
 }
 
-/* Pokud je někde použit flex nebo grid pro text */
-.text-block, .text-block * {
-    display: block;
+/* Pokud rodič používá flex nebo grid, přepnout směr pro text */
+.text-block {
+    display: flex;
+    flex-direction: column; /* umožní <br> zalomení */
     white-space: normal;
 }
-
-/* Odstranění možných konfliktů s overflow */
-p, h2, h3, li {
-    overflow: visible;      /* zabrání "schování" textu za hranicemi rodiče */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
