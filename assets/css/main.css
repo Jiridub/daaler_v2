@@ -2815,8 +2815,10 @@ body.is-preload *:before, body.is-preload *:after {
 
 #one.wrapper.style1.special {
     background: url("../../images/daaler_2.jpeg") no-repeat center center scroll !important;
-    background-size: contain !important; /* celý obrázek vidět, nebude přiblížený */
+    background-size: cover !important; /* vyplní celý kontejner, zachová proporce, okraje se oříznou */
     background-repeat: no-repeat !important;
+    background-position: center center !important; /* udržuje střed obrázku */
+	background-color: black !important;
     color: #ffffff !important;
 }
 .wrapper.style1 strong, .wrapper.style1 b {
@@ -4198,6 +4200,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
