@@ -2813,11 +2813,11 @@ body.is-preload *:before, body.is-preload *:after {
 			padding: 0;
 		}
 
-		.wrapper.style1 {
-			background-color: #000000; /* černé pozadí */
-    		color: #ffffff; /* bílý text */
-		}
-
+.wrapper.style1 {
+    background: url("../images/daaler_1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
 			.wrapper.style1 strong, .wrapper.style1 b {
 				color: #ffffff;
 			}
@@ -4197,6 +4197,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
