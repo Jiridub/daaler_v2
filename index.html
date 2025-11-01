@@ -151,8 +151,8 @@ const preloader = document.getElementById('preloader');
 
 function hidePreloader() {
     preloader.style.opacity = '0';
-    preloader.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => preloader.remove(), 500);
+    preloader.style.transition = 'opacity 0.2s ease';
+    setTimeout(() => preloader.remove(), 200);
     document.body.classList.remove('is-preload');
 }
 
@@ -175,6 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 </script>
+
 
 
 
