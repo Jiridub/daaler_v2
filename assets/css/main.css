@@ -2816,6 +2816,7 @@ body.is-preload *:before, body.is-preload *:after {
 .wrapper.style1 {
     background: url("../../images/daaler_1.jpeg") no-repeat center center fixed !important;
     background-size: cover !important;
+    background-position: center center !important; /* vycentrování */
     color: #ffffff !important;
 }
 .wrapper.style1 strong, .wrapper.style1 b {
@@ -4197,6 +4198,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
