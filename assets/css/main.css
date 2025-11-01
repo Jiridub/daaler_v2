@@ -2814,11 +2814,11 @@ body.is-preload *:before, body.is-preload *:after {
 		}
 
 .wrapper.style1 {
-    background: url("../images/daaler_1.jpeg") no-repeat center center fixed;
+    background: url("../../images/daaler_1.jpeg") no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
 }
-			.wrapper.style1 strong, .wrapper.style1 b {
+.wrapper.style1 strong, .wrapper.style1 b {
 				color: #ffffff;
 			}
 
