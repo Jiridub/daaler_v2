@@ -2814,8 +2814,8 @@ body.is-preload *:before, body.is-preload *:after {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
+			background-color: #000000; /* černé pozadí */
+    		color: #ffffff; /* bílý text */
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -4197,6 +4197,7 @@ body.is-preload #banner-video {
 #banner .more.scrolly .scroll-arrow {
     animation: bounce 2s infinite;
 }
+
 
 
 
